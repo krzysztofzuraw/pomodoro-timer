@@ -1,0 +1,28 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "Pomodoro timer",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.css, *.html, *.js'"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "es6"
+  ],
+  "author": "Krzysztof Żuraw",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0"
+  },
+  {
+    "":""
+  }
+}
