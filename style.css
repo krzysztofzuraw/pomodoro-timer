@@ -1,0 +1,18 @@
+.display__time-left {
+  font-weight: 100;
+  font-size: 20rem;
+  margin: 0;
+  color: black;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.control_buttons {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

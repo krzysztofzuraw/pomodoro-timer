@@ -17,3 +17,9 @@ Disclamer
 
 This application is not affiliated, associated or endorsed by the Pomodoro Technique® or Francesco Cirillo.
 The Pomodoro Technique® and Pomodoro™ are registered trademarks by Francesco Cirillo.
+
+Credits
+-------
+
+Sound used in this project is taken from `freesound website <https://www.freesound.org/people/HerbertBoland/sounds/30085/>`_ under
+`CC BY 3.0 <https://creativecommons.org/licenses/by/3.0/>`_.
