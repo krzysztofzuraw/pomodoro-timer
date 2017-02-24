@@ -3,6 +3,7 @@ const timerDisplay = document.querySelector('.display__time-left');
 const startTimeBtn = document.querySelector('[data-action="start"]');
 const restartTimeBtn = document.querySelector('[data-action="stop"]');
 const endSound = document.querySelector('#end_sound');
+let notificationPermission = false;
 
 function displayTimeLeft(seconds) {
   const minutes = Math.floor(seconds / 60);
@@ -16,6 +17,17 @@ function playAudio() {
   sound.play();
 }
 
+function displayNotification() {
+  if (!notificationPermission) return;
+  const notification = new Notification("Time's up!", {
+    icon: 'stopwatch.png',
+  });
+
+  notification.addEventListener('click', () => {
+    window.focus();
+  });
+}
+
 function timer(seconds) {
   const now = Date.now();
   const then = now + (seconds * 1000);
@@ -27,6 +39,7 @@ function timer(seconds) {
     if (secondsLeft < 0) {
       clearInterval(countdown);
       playAudio();
+      displayNotification();
       return;
     }
 
@@ -43,4 +56,11 @@ restartTimeBtn.addEventListener('click', () => {
   clearInterval(countdown);
   countdown = undefined;
   timerDisplay.textContent = '25:00';
+});
+
+
+Notification.requestPermission().then((result) => {
+  if (result === 'granted') {
+    notificationPermission = true;
+  }
 });

@@ -2,6 +2,8 @@
   "extends": "airbnb",
   "globals": {
     "document": true,
-    "Audio": true
+    "Audio": true,
+    "Notification": true,
+    "window": true,
   }
 }
