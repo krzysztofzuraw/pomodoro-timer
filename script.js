@@ -17,9 +17,9 @@ function playAudio() {
   sound.play();
 }
 
-function displayNotification() {
+function displayNotification(notificationText) {
   if (!notificationPermission) return;
-  const notification = new Notification("Time's up!", {
+  const notification = new Notification(notificationText, {
     icon: 'stopwatch.png',
   });
 
