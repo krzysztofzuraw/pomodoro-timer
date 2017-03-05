@@ -15,4 +15,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 50px;
+}
+
+.table-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }

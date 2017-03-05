@@ -1,9 +1,9 @@
 {
   "extends": "airbnb",
-  "globals": {
-    "document": true,
-    "Audio": true,
-    "Notification": true,
-    "window": true,
-  }
+  "env": {
+    "browser": true
+  },
+  "rules" : {
+    "no-use-before-define": ["error", { "functions": false }]
+  },
 }
