@@ -26,12 +26,12 @@
             <th class="mdl-data-table__cell--non-numeric">Start Time</th>
             <th class="mdl-data-table__cell--non-numeric">End Time</th>
             <th class="mdl-data-table__cell--non-numeric">Type</th>
+            <th class="mdl-data-table__cell--non-numeric">Was good?</th>
           </tr>
         </thead>
         <tbody class="table-body">
         </tbody>
       </table>
-
     </div>
 
     <div class="control_buttons">
@@ -39,6 +39,21 @@
         Reset
       </button>
     </div>
+
+    <div class="is-hidden modal-overlay">
+      <div class="modal">
+        <h2 class="modal_question">How was your pomodoro?</h2>
+        <div class="modal_buttons">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-productive="true">
+            Productive
+          </button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" data-productive="false">
+            Not really productive
+          </button>
+        </div>
+      </div>
+    </div>
+
     <audio id="end_sound" src="sound.wav"></audio>
     <script src="script.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>

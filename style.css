@@ -15,12 +15,53 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .table-flex {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding: 50px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  padding: 20px 30px;
+  width: 90%;
+  max-height: calc(100% - 150px);
+  position: relative;
+  min-height: 300px;
+  margin: 5% auto 0;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.modal .modal_question {
+  flex: 2;
+}
+
+.modal_buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1;
+}
+
+.modal_buttons .mdl-button {
+  margin-right: 10px;
 }
