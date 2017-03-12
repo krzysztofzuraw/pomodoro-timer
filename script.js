@@ -66,7 +66,7 @@ function retrieveTimeEntryFromLocalStorage() {
         <td class="mdl-data-table__cell--non-numeric">${entry.startTime}</td>
         <td class="mdl-data-table__cell--non-numeric">${entry.endTime}</td>
         <td class="mdl-data-table__cell--non-numeric">${entry.type}</td>
-        <td class="mdl-data-table__cell--non-numeric">${entry.wasGood === true ? '✔' : '✖'}</td>
+        <td class="mdl-data-table__cell--non-numeric">${JSON.parse(entry.wasGood) === true ? '✔' : '✖'}</td>
       </tr>
     `).join('');
 }
