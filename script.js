@@ -43,12 +43,13 @@ function makeBreak(hasBreak) {
 }
 
 function extractHoursMinutes(date) {
-  return date.split(' ').splice(4, 1)[0].slice(0, 5);
+  const fullDate = new Date(date);
+  return `${fullDate.getHours()}:${fullDate.getMinutes()}`;
 }
 
 function saveTimeEntryToLocalStorage(startSeconds, endSeconds, type, wasGood) {
-  const startTime = extractHoursMinutes(Date(startSeconds));
-  const endTime = extractHoursMinutes(Date(endSeconds));
+  const startTime = extractHoursMinutes(startSeconds);
+  const endTime = extractHoursMinutes(endSeconds);
 
   const entry = {
     startTime,
@@ -82,7 +83,6 @@ function timer(seconds, hasBreakAfter = true) {
     if (secondsLeft < 0) {
       clearInterval(countdown);
       playAudio();
-      makeBreak(hasBreakAfter);
       displayNotification(hasBreakAfter ? 'Time to rest dude!' : 'Time to work dude!');
       if (hasBreakAfter) modal.classList.remove('is-hidden');
       return;
@@ -116,6 +116,7 @@ function closeModal(event) {
   modal.classList.add('is-hidden');
   saveTimeEntryToLocalStorage(now, then, 'Pomodoro', event.target.dataset.productive);
   retrieveTimeEntryFromLocalStorage();
+  makeBreak(true);
 }
 
 Notification.requestPermission().then((result) => {
